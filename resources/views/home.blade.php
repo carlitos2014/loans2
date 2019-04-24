@@ -7,9 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">                    
-                    Sistema de roles y permisos
-                </div>
+                
             </div>
         </div>
     </div>
