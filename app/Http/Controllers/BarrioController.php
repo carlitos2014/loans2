@@ -40,7 +40,7 @@ class BarrioController extends Controller
      */
     public function store(Request $request)
     {
-        $barrios = Barrio::create($request->all());
+        $barrio = Barrio::create($request->all());
 
         return redirect()->route('barrios.edit', $barrio->id)
             ->with('info', 'Barrio guardado con éxito');

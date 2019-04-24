@@ -17,6 +17,7 @@ class CreatePlazosTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('num_dias');
+            $table->string('x');
             $table->timestamps();
         });
     }
