@@ -7,8 +7,8 @@
 	{{ Form::text('valor', null, ['class' => 'form-control', 'id' => 'valor']) }}
 </div>
 <div class="form-group">
-	{{ Form::label('tasa', 'Tasa') }}
-	{{ Form::text('tasa', null, ['class' => 'form-control', 'id' => 'tasa']) }}
+	{!! Form::label('tasa_id', 'Tasa *') !!}
+	{!! Form::select('tasa_id', $tasa, null, ['class' => 'form-control', 'placeholder' => ('Seleccione Una Tasa')]) !!}
 </div>
 <div class="form-group">
 	{!! Form::label('plazo_id', 'Plazo *') !!}

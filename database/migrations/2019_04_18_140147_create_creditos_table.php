@@ -18,7 +18,6 @@ class CreateCreditosTable extends Migration
             $table->date('date');
             $table->string('observacion');
             $table->decimal('valor', 10,2);
-            $table->string('tasa');
             $table->string('name_fiador');
             $table->string('lastname_fiador');
             $table->string('phone_fiador');
@@ -31,6 +30,9 @@ class CreateCreditosTable extends Migration
             ->onUpdate('cascade')->onDelete('cascade');
             $table->integer('formapago_id')->unsigned();
             $table->foreign('formapago_id')->references('id')->on('forma_pagos')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('tasa_id')->unsigned();
+            $table->foreign('tasa_id')->references('id')->on('tasas')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

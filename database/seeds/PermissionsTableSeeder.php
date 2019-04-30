@@ -292,17 +292,17 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Podría eliminar cualquier plazo del sistema',      
         ]);
 
-        //Plazos
+        //Parametros
         Permission::create([
-            'name'          => 'Navegar plazos',
+            'name'          => 'Navegar parametros',
             'slug'          => 'parametros.index',
             'description'   => 'Lista y navega todos los parametros del sistema',
         ]);
 
         Permission::create([
-            'name'          => 'Ver detalle de un plazo',
+            'name'          => 'Ver detalle de un parametro',
             'slug'          => 'parametros.show',
-            'description'   => 'Ve en detalle cada plazo del sistema',            
+            'description'   => 'Ve en detalle cada parametro del sistema',            
         ]);
         
         Permission::create([
@@ -314,13 +314,44 @@ class PermissionsTableSeeder extends Seeder
         Permission::create([
             'name'          => 'Edición de parametros',
             'slug'          => 'parametros.edit',
-            'description'   => 'Podría editar cualquier dato de un plazo del sistema',
+            'description'   => 'Podría editar cualquier dato de un parametro del sistema',
         ]);
         
         Permission::create([
             'name'          => 'Eliminar parametros',
             'slug'          => 'parametros.destroy',
-            'description'   => 'Podría eliminar cualquier plazo del sistema',      
+            'description'   => 'Podría eliminar cualquier parametro del sistema',      
+        ]);
+
+        //Tasas
+        Permission::create([
+            'name'          => 'Navegar tasas',
+            'slug'          => 'tasas.index',
+            'description'   => 'Lista y navega todos los tasas del sistema',
+        ]);
+
+        Permission::create([
+            'name'          => 'Ver detalle de un tasa',
+            'slug'          => 'tasas.show',
+            'description'   => 'Ve en detalle cada tasa del sistema',            
+        ]);
+        
+        Permission::create([
+            'name'          => 'Creación de tasas',
+            'slug'          => 'tasas.create',
+            'description'   => 'Podría crear nuevos tasas en el sistema',
+        ]);
+        
+        Permission::create([
+            'name'          => 'Edición de tasas',
+            'slug'          => 'tasas.edit',
+            'description'   => 'Podría editar cualquier dato de un tasa del sistema',
+        ]);
+        
+        Permission::create([
+            'name'          => 'Eliminar tasas',
+            'slug'          => 'tasas.destroy',
+            'description'   => 'Podría eliminar cualquier tasa del sistema',      
         ]);
 
         //Config

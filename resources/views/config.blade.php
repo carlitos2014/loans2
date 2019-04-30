@@ -40,6 +40,11 @@
                                 <a class="nav-link" href="{{ route('plazos.index') }}">Plazos</a>
                             </li>
                             @endcan
+                            @can('tasas.index')
+                            <li class="nav-item">                            
+                                <a class="nav-link" href="{{ route('tasas.index') }}">Tasas</a>
+                            </li>
+                            @endcan
                             @can('parametros.index')
                             <li class="nav-item">                            
                                 <a class="nav-link" href="{{ route('parametros.index') }}">Parametros</a>

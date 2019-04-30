@@ -243,5 +243,27 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('parametros/{parametro}/edit', 'ParametroController@edit')->name('parametros.edit')
 		->middleware('permission:parametros.edit');
+
+	//Tasas
+	Route::post('tasas/store', 'TasaController@store')->name('tasas.store')
+		->middleware('permission:tasas.create');
+
+	Route::get('tasas', 'TasaController@index')->name('tasas.index')
+		->middleware('permission:tasas.index');
+
+	Route::get('tasas/create', 'TasaController@create')->name('tasas.create')
+		->middleware('permission:tasas.create');
+
+	Route::put('tasas/{tasa}', 'TasaController@update')->name('tasas.update')
+		->middleware('permission:tasas.edit');
+
+	Route::get('tasas/{tasa}', 'TasaController@show')->name('tasas.show')
+		->middleware('permission:tasas.show');
+
+	Route::delete('tasas/{tasa}', 'TasaController@destroy')->name('tasas.destroy')
+		->middleware('permission:tasas.destroy');
+
+	Route::get('tasas/{tasa}/edit', 'TasaController@edit')->name('tasas.edit')
+		->middleware('permission:tasas.edit');
 	});
 

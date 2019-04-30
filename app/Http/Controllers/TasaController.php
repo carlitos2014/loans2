@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Credito;
-use App\Cliente;
-use App\Plazo;
-use App\FormaPago;
 use App\Tasa;
 use Illuminate\Http\Request;
 
-class CreditoController extends Controller
+class TasaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +14,9 @@ class CreditoController extends Controller
      */
     public function index()
     {
-        $creditos = Credito::paginate();
+        $tasas = Tasa::paginate();
 
-        return view('creditos.index', compact('creditos'));
+        return view('tasas.index', compact('tasas'));
     }
 
     /**
@@ -30,12 +26,7 @@ class CreditoController extends Controller
      */
     public function create()
     {
-        $cliente = Cliente::pluck('name', 'id');
-        $plazo = Plazo::pluck('name', 'id');
-        $formapago = FormaPago::pluck('name', 'id');
-        $tasa = Tasa::pluck('name', 'id');
-
-        return view('creditos.create', compact('cliente', 'plazo', 'formapago', 'tasa'));
+        return view('tasas.create');
     }
 
     /**
@@ -46,10 +37,10 @@ class CreditoController extends Controller
      */
     public function store(Request $request)
     {
-        $credito = Credito::create($request->all());
+        $tasa = Tasa::create($request->all());
 
-        return redirect()->route('creditos.edit', $credito->id)
-            ->with('info', 'Credito guardado con éxito');
+        return redirect()->route('tasas.index', $tasa->id)
+            ->with('info', 'Tasa guardada con éxito');
     }
 
     /**
@@ -60,8 +51,9 @@ class CreditoController extends Controller
      */
     public function show($id)
     {
-        $credito = Credito::find($id);
-        return view('creditos.show', compact('credito'));
+        $tasas = Tasa::find($id);
+
+        return view('tasas.show', compact('tasas'));
     }
 
     /**
@@ -72,13 +64,8 @@ class CreditoController extends Controller
      */
     public function edit($id)
     {
-        $credito = Credito::find($id);
-        $cliente = Cliente::pluck('name', 'id');
-        $plazo = Plazo::pluck('name', 'id');
-        $formapago = FormaPago::pluck('name', 'id');
-        $tasa = Tasa::pluck('name', 'id');
-
-        return view('creditos.edit', compact('credito', 'cliente', 'plazo', 'formapago', 'tasa'));
+        $tasa = Tasa::find($id);
+        return view('tasas.edit', compact('tasa'));
     }
 
     /**
@@ -90,11 +77,11 @@ class CreditoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $credito = Credito::find($id);
-        $credito->update($request->all());
+        $tasa = Tasa::find($id);
+        $tasa->update($request->all());
 
-        return redirect()->route('creditos.edit', $credito->id)
-            ->with('info', 'Credito guardado con éxito');
+        return redirect()->route('tasas.edit', $tasa->id)
+            ->with('info', 'Tasa guardada con éxito');
     }
 
     /**
@@ -105,7 +92,7 @@ class CreditoController extends Controller
      */
     public function destroy($id)
     {
-        $creditos = Credito::find($id)->delete();
+        $tasas = Tasa::find($id)->delete();
 
         return back()->with('info', 'Eliminado correctamente');
     }
