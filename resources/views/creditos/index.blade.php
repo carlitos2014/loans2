@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Creditos
@@ -29,7 +28,7 @@
                                 <th>Forma de pago</th>
                                 <th>Fecha</th>
                                 <th>Observacion</th>
-                                <th colspan="3">&nbsp;</th>
+                                <th colspan="3">Acciones&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,12 +37,28 @@
                                 <td>{{ $row->id }}</td>
                                 <td>
                                     <a href="{!! action('ClienteController@edit', $row->cliente_id) !!}"> {{ $row->Cliente->name}}</a></td>
-                                <td>{{ $row->valor }}</td>
+                                <td>$ {{ $row->valor }}</td>
                                 <td>% {{ $row->Tasa->name }}</td>
                                 <td>{{ $row->Plazo->name }}</td>
-                                <td>{{ $row->FormaPago }}</td>
+                                <td>{{ $row->FormaPago['name'] }}</td>
                                 <td>{{ $row->date }}</td>
                                 <td>{{ $row->observacion }}</td>
+                                @can('creditos.pagare')
+                                <td width="10px">
+                                    <a href="{{ route('creditos.pagare', $row->id) }}" target="_black" 
+                                    class="btn btn-sm btn-default">
+                                        pagare 
+                                    </a>
+                                </td>
+                                @endcan
+                                @can('creditos.voucher')
+                                <td width="10px">
+                                    <a href="{{ route('creditos.voucher', $row->id) }}" target="_black" 
+                                    class="btn btn-sm btn-default">
+                                        voucher 
+                                    </a>
+                                </td>
+                                @endcan
                                 @can('creditos.show')
                                 <td width="10px">
                                     <a href="{{ route('creditos.show', $row->id) }}" 

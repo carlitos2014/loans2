@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Abonos
@@ -26,7 +25,7 @@
                                 <th>Valor</th>
                                 <th>Fecha de Abono</th>
                                 <th>Observacion</th>
-                                <th colspan="3">&nbsp;</th>
+                                <th colspan="3">Acciones&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>

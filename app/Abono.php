@@ -21,4 +21,9 @@ class Abono extends Model
     protected $fillable = [
         'valor', 'date', 'observacion', 'credito_id',
     ];
+
+    public function Credito()
+    {
+        return $this->belongsTo('App\Credito');
+    }
 }

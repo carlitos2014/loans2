@@ -19,8 +19,7 @@ class CreateAbonosTable extends Migration
             $table->date('date');
             $table->string('observacion');
             $table->integer('credito_id')->unsigned();
-            $table->foreign('credito_id')->references('id')->on('creditos')
-            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('credito_id')->references('id')->on('creditos');
             $table->timestamps();
         });
     }

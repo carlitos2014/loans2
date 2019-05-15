@@ -41,4 +41,9 @@ class Credito extends Model
     {
         return $this->belongsTo('App\Tasa');
     }
+
+    public function Abono()
+    {
+        return $this->hasMany('App\Abono');
+    }
 }

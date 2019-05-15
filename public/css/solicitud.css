@@ -1,0 +1,46 @@
+html {
+margin: 0;
+}
+body {
+font-family: "Arial", serif;
+font-size: 12;
+margin: 10mm 24mm 14mm 26mm;
+}
+
+hr {
+page-break-after: always;
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+p .primero {
+	background:#AB1E00;
+
+}
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        padding: 4px 3px;
+        font-size: 13px;
+    }
+}
+.tabla{
+        margin-top: 7px;
+        font-size: 9px;
+    }
+.tabla td{
+        border: 1px solid #E6E6E6;
+    }
+.tabla .sello{
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 1px dotted #000;
+        width: 200px;
+    }
+
+.border{
+        border: 1px solid #000;
+    }

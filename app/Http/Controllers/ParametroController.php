@@ -51,9 +51,14 @@ class ParametroController extends Controller
      */
     public function show($id)
     {
-        $parametros = Parametro::all();
+        //
+    }
 
-        return view('layouts', compact('parametros'));
+    public function layouts($id)
+    {
+        $parametro = Parametro::all();
+
+        return view('layouts.app', compact('parametro'));
     }
 
     /**

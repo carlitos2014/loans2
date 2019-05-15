@@ -178,6 +178,12 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('creditos/{credito}/edit', 'CreditoController@edit')->name('creditos.edit')
 		->middleware('permission:creditos.edit');
 
+	Route::get('creditos/{credito}/pagare', 'CreditoController@pagare')->name('creditos.pagare')
+		->middleware('permission:creditos.pagare');
+
+	Route::get('creditos/{credito}/voucher', 'CreditoController@voucher')->name('creditos.voucher')
+		->middleware('permission:creditos.voucher');
+
 	//FormaPagos
 	Route::post('formapagos/store', 'FormaPagoController@store')->name('formapagos.store')
 		->middleware('permission:formapagos.create');
@@ -237,6 +243,9 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('parametros/{parametro}', 'ParametroController@show')->name('parametros.show')
 		->middleware('permission:parametros.show');
+
+	Route::get('layouts/{parametro}', 'ParametroController@layouts')->name('parametros.layouts')
+		->middleware('permission:parametros.layouts');
 
 	Route::delete('parametros/{parametro}', 'ParametroController@destroy')->name('parametros.destroy')
 		->middleware('permission:parametros.destroy');

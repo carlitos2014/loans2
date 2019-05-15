@@ -42,7 +42,7 @@ class AbonoController extends Controller
     {
         $abonos = Abono::create($request->all());
 
-        return redirect()->route('abonos.edit', $abonos->id)
+        return redirect()->route('abonos.index')
             ->with('info', 'Abono guardado con éxito');
     }
 
@@ -85,7 +85,7 @@ class AbonoController extends Controller
         $abonos = Abono::find($id);
         $abonos->update($request->all());
 
-        return redirect()->route('abonos.edit', $abonos->id)
+        return redirect()->route('abonos.index')
             ->with('info', 'Abono guardado con éxito');
     }
 

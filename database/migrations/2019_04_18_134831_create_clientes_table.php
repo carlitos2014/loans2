@@ -21,8 +21,7 @@ class CreateClientesTable extends Migration
             $table->string('phone');
             $table->string('address');
             $table->integer('barrio_id')->unsigned();
-            $table->foreign('barrio_id')->references('id')->on('barrios')
-            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('barrio_id')->references('id')->on('barrios');
             $table->timestamps();
         });
     }

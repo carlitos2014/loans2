@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FormaPagosTableSeeder::class);
         $this->call(PlazosTableSeeder::class);
         $this->call(CiudadesTableSeeder::class);
+        $this->call(TasasTableSeeder::class);
     }
 }

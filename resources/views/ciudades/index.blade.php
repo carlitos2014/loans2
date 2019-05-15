@@ -7,9 +7,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Acciones</th>
-                <th>Acciones</th>
-                <th>Acciones</th>
+                <th width="100">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -23,18 +21,14 @@
                                     class="btn btn-sm btn-default">
                                         ver
                                     </a>
-                                </td>
                                 @endcan
                                 @can('ciudades.edit')
-                                <td>
                                     <a href="{{ route('ciudades.edit', $row->id) }}" 
                                     class="btn btn-sm btn-default">
                                         editar
                                     </a>
-                                </td>
                                 @endcan
                                 @can('ciudades.destroy')
-                                <td>
                                     {!! Form::open(['route' => ['ciudades.destroy', $row->id], 
                                     'method' => 'DELETE']) !!}
                                         <button class="btn btn-sm btn-danger">
