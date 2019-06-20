@@ -53,7 +53,7 @@
                                 @endcan
                                 @can('creditos.voucher')
                                 <td width="10px">
-                                    <a href="{{ route('creditos.voucher', $row->id) }}" target="_black" 
+                                    <a href="{{ route('creditos.voucher', $row->id) }}" 
                                     class="btn btn-sm btn-default">
                                         voucher 
                                     </a>

@@ -94,6 +94,7 @@ class CreditoController extends Controller
         $printer -> text('creditos.voucher', ['credito' => $credito]);
         $printer -> cut();
         $printer -> close();
+        return back()->with('info', 'Eliminado correctamente');
     }
 
     /**
