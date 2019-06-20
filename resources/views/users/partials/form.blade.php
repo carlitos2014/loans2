@@ -18,10 +18,6 @@
 	{{ Form::label('password', 'Contraseña') }}
 	{{ Form::text('password', null, ['class' => 'form-control', 'id' => 'password']) }}
 </div>
-<div class="form-group">
-	{{ Form::label('avatar', 'Avatar') }}
-	{{ Form::file('avatar', null, ['class' => 'form-control', 'id' => 'avatar']) }}
-</div>
 <hr>
 <h3>Lista de roles</h3>
 <div class="form-group">

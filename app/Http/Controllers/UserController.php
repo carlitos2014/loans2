@@ -35,19 +35,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('ruta')){
-
-            $avatar=$request->avatar('ruta');
-            $name=$avatar->getClientOriginalName();
-            $avatar->move(public_path().'/img/',$name);
-        }
-
-         $users = User::create([
+        $users = User::create([
             'name' => $request['name'],
             'last_name' => $request['last_name'],
             'user_name' => $request['user_name'],
             'email' => $request['email'],
-            'avatar' => $request['avatar'],
             'password' => bcrypt($request['password']),
         ]);
 
@@ -95,15 +87,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->update($request->all());
-
-        $user->fill($request->except('ruta'));
-        if($request->hasFile('ruta')){
-
-            $avatar=$request->avatar('ruta');
-            $name=$avatar->getClientOriginalName();
-            $user->ruta=$name;
-            $avatar->move(public_path().'/imagenes/',$name);
-        }
 
         $user->roles()->sync($request->get('roles'));
 
