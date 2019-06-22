@@ -28,8 +28,8 @@ class CreateCreditosTable extends Migration
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes')
             ->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('formapago_id')->unsigned();
-            $table->foreign('formapago_id')->references('id')->on('forma_pagos')
+            $table->integer('metodo_id')->unsigned();
+            $table->foreign('metodo_id')->references('id')->on('metodos')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->integer('tasa_id')->unsigned();
             $table->foreign('tasa_id')->references('id')->on('tasas')

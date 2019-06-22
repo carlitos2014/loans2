@@ -30,9 +30,9 @@
                                 <a class="nav-link" href="{{ route('barrios.index') }}">Barios</a>
                             </li>
                             @endcan
-                            @can('formapagos.index')
+                            @can('metodos.index')
                             <li class="nav-item">                            
-                                <a class="nav-link" href="{{ route('formapagos.index') }}">Formas de pago</a>
+                                <a class="nav-link" href="{{ route('metodos.index') }}">Formas de pago</a>
                             </li>
                             @endcan
                             @can('plazos.index')

@@ -416,6 +416,7 @@ class ComposerStaticInit0029e45ba2609ab229bdcfbb4932c916
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Metodo' => __DIR__ . '/../..' . '/app/Metodo.php',
         'App\\Parametro' => __DIR__ . '/../..' . '/app/Parametro.php',
         'App\\Plazo' => __DIR__ . '/../..' . '/app/Plazo.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

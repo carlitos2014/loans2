@@ -185,26 +185,26 @@ Route::middleware(['auth'])->group(function () {
 		->middleware('permission:creditos.voucher');
 
 	//FormaPagos
-	Route::post('formapagos/store', 'FormaPagoController@store')->name('formapagos.store')
-		->middleware('permission:formapagos.create');
+	Route::post('metodos/store', 'MetodoController@store')->name('metodos.store')
+		->middleware('permission:metodos.create');
 
-	Route::get('formapagos', 'FormaPagoController@index')->name('formapagos.index')
-		->middleware('permission:formapagos.index');
+	Route::get('metodos', 'MetodoController@index')->name('metodos.index')
+		->middleware('permission:metodos.index');
 
-	Route::get('formapagos/create', 'FormaPagoController@create')->name('formapagos.create')
-		->middleware('permission:formapagos.create');
+	Route::get('metodos/create', 'MetodoController@create')->name('metodos.create')
+		->middleware('permission:metodos.create');
 
-	Route::put('formapagos/{formapago}', 'FormaPagoController@update')->name('formapagos.update')
-		->middleware('permission:formapagos.edit');
+	Route::put('metodos/{metodos}', 'MetodoController@update')->name('metodos.update')
+		->middleware('permission:metodos.edit');
 
-	Route::get('formapagos/{formapago}', 'FormaPagoController@show')->name('formapagos.show')
-		->middleware('permission:formapagos.show');
+	Route::get('metodos/{metodos}', 'MetodoController@show')->name('metodos.show')
+		->middleware('permission:metodos.show');
 
-	Route::delete('formapagos/{formapago}', 'FormaPagoController@destroy')->name('formapagos.destroy')
-		->middleware('permission:formapagos.destroy');
+	Route::delete('metodos/{metodos}', 'MetodoController@destroy')->name('metodos.destroy')
+		->middleware('permission:metodos.destroy');
 
-	Route::get('formapagos/{formapago}/edit', 'FormaPagoController@edit')->name('formapagos.edit')
-		->middleware('permission:formapagos.edit');
+	Route::get('metodos/{metodos}/edit', 'MetodoController@edit')->name('metodos.edit')
+		->middleware('permission:metodos.edit');
 
 	//Plazos
 	Route::post('plazos/store', 'PlazoController@store')->name('plazos.store')

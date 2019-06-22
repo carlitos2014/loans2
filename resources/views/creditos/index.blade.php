@@ -40,7 +40,7 @@
                                 <td>$ {{ $row->valor }}</td>
                                 <td>% {{ $row->Tasa->name }}</td>
                                 <td>{{ $row->Plazo->name }}</td>
-                                <td>{{ $row->FormaPago['name'] }}</td>
+                                <td>{{ $row->Metodo->name }}</td>
                                 <td>{{ $row->date }}</td>
                                 <td>{{ $row->observacion }}</td>
                                 @can('creditos.pagare')

@@ -19,7 +19,7 @@ class Credito extends Model
      * @var array
      */
     protected $fillable = [
-        'date', 'observacion', 'valor', 'name_fiador', 'lastname_fiador', 'phone_fiador', 'address_fiador', 'plazo_id', 'cliente_id', 'formapago_id', 'tasa_id',
+        'date', 'observacion', 'valor', 'name_fiador', 'lastname_fiador', 'phone_fiador', 'address_fiador', 'plazo_id', 'cliente_id', 'metodo_id', 'tasa_id',
     ];
 
     public function Cliente()
@@ -27,9 +27,9 @@ class Credito extends Model
         return $this->belongsTo('App\Cliente');
     }
 
-    public function FormaPago()
+    public function Metodo()
     {
-        return $this->belongsTo('App\FormaPago');
+        return $this->belongsTo('App\Metodo');
     }
 
     public function Plazo()

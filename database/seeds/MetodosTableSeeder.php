@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\FormaPago;
+use App\Metodo;
 
-class FormaPagosTableSeeder extends Seeder
+class MetodosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,22 +12,22 @@ class FormaPagosTableSeeder extends Seeder
      */
     public function run()
     {
-        FormaPago::create([
+        Metodo::create([
         	'name'		=> 'Diario',
         	'dias'  	=> '1',
         ]);
 
-        FormaPago::create([
+        Metodo::create([
         	'name'		=> 'Semanal',
         	'dias'  	=> '7',
         ]);
 
-        FormaPago::create([
+        Metodo::create([
         	'name'		=> 'Quincenal',
         	'dias'  	=> '15',
         ]);
 
-        FormaPago::create([
+        Metodo::create([
         	'name'		=> 'Mensual',
         	'dias'  	=> '30',
         ]);
