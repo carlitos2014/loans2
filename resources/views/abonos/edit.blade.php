@@ -8,7 +8,7 @@
                 <div class="panel-heading">Abonos</div>
 
                 <div class="panel-body">                    
-                    {!! Form::model($abono, ['route' => ['abonos.update', $abono->id],
+                    {!! Form::model($abonos, ['route' => ['abonos.update', $abonos->id],
                     'method' => 'PUT']) !!}
 
                         @include('abonos.partials.form')
